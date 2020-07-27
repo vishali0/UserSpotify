@@ -1,0 +1,36 @@
+<!-- Manageuser -->
+
+<a routerLink="add" class="btn btn-sm btn-success mb-2">Add Songs In PlayList</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="width: 15%">ID</th>
+      <th style="width: 15%">Song ID</th>
+      <th style="width: 15%">PlayList ID</th>
+      <th style="width: 15%">User Id</th>
+      <th style="width: 10%"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let playList of playLists ; let row=index">
+      <td>{{playList.Id}}</td>
+      <td>{{playList.playListId}}</td>
+      <td>{{playList.songId}}</td>
+      <td>{{playList.userId}}</td>
+
+      <td style="white-space: nowrap">
+
+        <button (click)="deleteSongsInPlayList()" class="btn btn-sm btn-danger btn-delete-playList"
+          [disabled]="playList.isDeleting">
+          <span *ngIf="playList.isDeleting" class="spinner-border spinner-border-sm"></span>
+          <span *ngIf="!playList.isDeleting">Remove</span>
+        </button>
+      </td>
+    </tr>
+    <tr *ngIf="!playLists">
+      <td colspan="4" class="text-center">
+        <span class="spinner-border spinner-border-lg align-center"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

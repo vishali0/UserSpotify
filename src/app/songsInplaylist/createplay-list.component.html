@@ -1,0 +1,40 @@
+<h1 *ngIf="isAddMode">Add Song In playList</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col">
+      <label for="songId">Song Id</label>
+      <input type="int" formControlName="songId" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.songId.errors }" />
+      <div *ngIf="submitted && f.songId.errors" class="invalid-feedback">
+        <div *ngIf="f.songId.errors.required">SongId is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label for="playListId">PlayList Id</label>
+      <input type="int" formControlName="playListId" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.playListId.errors }" />
+      <div *ngIf="submitted && f.playListId.errors" class="invalid-feedback">
+        <div *ngIf="f.playListId.errors.required">UserId is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label for="userId">User Id</label>
+      <input type="int" formControlName="userId" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.userId.errors }" />
+      <div *ngIf="submitted && f.userId.errors" class="invalid-feedback">
+        <div *ngIf="f.userId.errors.required">UserId is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      Save
+    </button>
+    <a routerLink="/songsInplayList" class="btn btn-link">Cancel</a>
+  </div>
+</form>

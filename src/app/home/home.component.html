@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .text {
+      text-decoration-style: solid;
+      text-align: center;
+      color: brown;
+      font-style: italic;
+    }
+
+    /* .vertical-centre {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    } */
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("fa-thumbs-down");
+    }
+
+  </script>
+</head>
+
+<body>
+  <table class="table table-striped center">
+    <thead>
+      <tr>
+
+        <th style="width: 15%">Song Name</th>
+        <th style="width: 15%">Song Url</th>
+        <th style="width: 15%">Artists</th>
+        <th style="width: 15%">Album</th>
+        <th style="width: 15%">Play</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jai Ho</td>
+        <td>Song-1.mp3</td>
+        <td>ARR </td>
+        <td>SlumDog Millionaire</td>
+        <td>
+          <audio controls>
+            <source src="../../assets/Song-1.mp3" type="audio/mp3">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td>Kolaveri</td>
+        <td>Song-2.mp3</td>
+        <td>Anirudh</td>
+        <td>Movie 3</td>
+        <td>
+          <audio controls>
+            <source src="../../assets/Song-2.mp3" type="audio/mp3">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td>Tum hi ho</td>
+        <td>Song-3.mp3</td>
+        <td>Arjith Singh </td>
+        <td>Aashiq 2</td>
+        <td>
+          <audio controls>
+            <source src="../../assets/Song-3.mp3" type="audio/mp3">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td>Aluma Doluma</td>
+        <td>Song-4.mp3</td>
+        <td>Anirudh</td>
+        <td>Vedhalam</td>
+        <td>
+          <audio controls>
+            <source src="../../assets/Song-4.mp3" type="audio/mp3">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td>Maari</td>
+        <td>Song-5.mp3</td>
+        <td>Dhanush</td>
+        <td>Maari</td>
+        <td>
+          <audio controls>
+            <source src="../../assets/Song-5.mp3" type="audio/mp3">
+          </audio>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>
+<!-- //*ngFor="let user of users ; let row=index" -->
